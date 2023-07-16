@@ -19,7 +19,7 @@ N, P = zip(*share)
 plt.scatter(N, P)
 
 plt.xlabel("n")
-plt.ylabel("probability")
+plt.ylabel("Probability")
 
 plt.minorticks_on()
 
