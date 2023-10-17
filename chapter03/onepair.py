@@ -3,7 +3,7 @@
 import sys
 import random
 
-def nothing(numdo):
+def onepair(numdo):
     count = 0
     deck = []
     # for i in [1, 13]
@@ -19,10 +19,10 @@ def nothing(numdo):
         hand = random.sample(deck, 5)
         for k, _ in enumerate(hand):
             card[hand[k]] = 1
-        if sum(card) == 5:
+        if sum(card) == 4:
             count += 1
 
-    print("Theory says probability 5 distinct numbers is {}%.".format(2112/41.65))
+    print("Theory says probability one pair is {}%.".format(352/8.33))
     print("Observed probability is {}%.".format(100*count/numdo))
 
 if __name__ == "__main__":
@@ -30,5 +30,5 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         n = int(sys.argv[1])
 
-    nothing(n)
+    onepair(n)
 
